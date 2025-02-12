@@ -121,4 +121,4 @@ This project is licensed under the **MIT License**. Feel free to use and modify 
 
 ## ✨ Contact  
 
-For questions, issues, or feature requests, feel free to reach out via GitHub Issues or email me at **your.email@example.com**.
+For questions, issues, or feature requests, feel free to reach out via GitHub Issues 
