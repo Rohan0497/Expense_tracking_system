@@ -1,6 +1,6 @@
-# 🚀 Expense Management System  
+# 🚀 Expense Management System
 
-A robust **Expense Management System** consisting of a **FastAPI** backend and a **Streamlit** frontend for seamless tracking and management of expenses. This project is designed for efficiency, scalability, and ease of use, making it suitable for both personal and business expense tracking.
+A robust **Expense Management System** consisting of a **FastAPI** backend, a **Streamlit** frontend, and a **MySQL** database. This project is designed for efficiency, scalability, and ease of use, making it suitable for both personal and business expense tracking.
 
 ---
 
@@ -13,7 +13,26 @@ expense-management-system/
 │── tests/          # Test cases for both backend and frontend
 │── requirements.txt # Python dependencies
 │── README.md       # Project documentation
+```  
+
+---
+
+## 🏗️ Architecture Diagram
+
+The system follows a **modular microservice-based** architecture, ensuring seamless communication between components.  
+
+```plaintext
++--------------------+        +--------------------+        +--------------------+
+|  Streamlit UI     |  <---> |  FastAPI Backend   |  <---> |  MySQL Database    |
+| (Frontend)        |  API   | (Business Logic)   |  SQL   | (Data Storage)    |
++--------------------+        +--------------------+        +--------------------+
 ```
+
+### 📌 Components:
+- **Frontend (Streamlit):** User-friendly interface for tracking expenses.
+- **Backend (FastAPI):** Handles business logic, authentication, and API endpoints.
+- **Database (MySQL):** Stores expense records securely.
+- **API Layer:** Connects frontend and backend via RESTful APIs.
 
 ---
 
@@ -31,7 +50,14 @@ Make sure you have **Python 3.8+** installed. Then, install the required depende
 pip install -r requirements.txt
 ```
 
-### 3️⃣ Start the FastAPI Backend  
+### 3️⃣ Start the MySQL Database  
+Ensure MySQL is installed and running. Then, create a database:  
+```sql
+CREATE DATABASE expense_db;
+```
+Update `backend/config.py` with your database credentials.
+
+### 4️⃣ Start the FastAPI Backend  
 Run the **FastAPI** backend server with **Uvicorn**:  
 ```bash
 uvicorn backend.server:app --reload
@@ -41,7 +67,7 @@ Access the **interactive API documentation** at:
 - **Swagger UI:** [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)  
 - **Redoc:** [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc)  
 
-### 4️⃣ Start the Streamlit Frontend  
+### 5️⃣ Start the Streamlit Frontend  
 Run the **Streamlit** frontend application:  
 ```bash
 streamlit run frontend/app.py
@@ -72,12 +98,12 @@ pytest tests/
 
 ## 📌 API Endpoints  
 
-| Method | Endpoint               | Description               |
-|--------|------------------------|---------------------------|
-| `GET`  | `/expenses`            | Get all expenses          |
-| `POST` | `/expenses`            | Add a new expense         |
-| `PUT`  | `/expenses/{id}`        | Update an expense         |
-| `DELETE` | `/expenses/{id}`      | Delete an expense         |
+| Method  | Endpoint               | Description               |
+|---------|------------------------|---------------------------|
+| `GET`   | `/expenses`            | Get all expenses          |
+| `POST`  | `/expenses`            | Add a new expense         |
+| `PUT`   | `/expenses/{id}`        | Update an expense         |
+| `DELETE`| `/expenses/{id}`        | Delete an expense         |
 
 Full API documentation is available at **`/docs`** after starting the backend.
 
@@ -87,7 +113,7 @@ Full API documentation is available at **`/docs`** after starting the backend.
 
 - **Backend:** FastAPI, Uvicorn  
 - **Frontend:** Streamlit  
-- **Database:** MySQL (Configurable)  
+- **Database:** MySQL  
 - **Testing:** Pytest  
 - **Dependency Management:** `pip`  
 
@@ -121,4 +147,5 @@ This project is licensed under the **MIT License**. Feel free to use and modify 
 
 ## ✨ Contact  
 
-For questions, issues, or feature requests, feel free to reach out via GitHub Issues 
+For questions, issues, or feature requests, feel free to reach out via GitHub Issues or email me at **your.email@example.com**.
+
