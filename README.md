@@ -17,16 +17,6 @@ expense-management-system/
 
 ---
 
-## 🏗️ Architecture Diagram
-
-The system follows a **modular microservice-based** architecture, ensuring seamless communication between components.  
-
-```plaintext
-+--------------------+        +--------------------+        +--------------------+
-|  Streamlit UI     |  <---> |  FastAPI Backend   |  <---> |  MySQL Database    |
-| (Frontend)        |  API   | (Business Logic)   |  SQL   | (Data Storage)    |
-+--------------------+        +--------------------+        +--------------------+
-```
 
 ### 📌 Components:
 - **Frontend (Streamlit):** User-friendly interface for tracking expenses.
