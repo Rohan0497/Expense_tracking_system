@@ -87,7 +87,7 @@ Full API documentation is available at **`/docs`** after starting the backend.
 
 - **Backend:** FastAPI, Uvicorn  
 - **Frontend:** Streamlit  
-- **Database:** SQLite/PostgreSQL (Configurable)  
+- **Database:** MySQL (Configurable)  
 - **Testing:** Pytest  
 - **Dependency Management:** `pip`  
 
